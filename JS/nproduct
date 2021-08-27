@@ -1,0 +1,19 @@
+const form = document.getElementById('form');
+    const pass = document.getElementById('name');
+    const name = document.getElementById('desc');
+    const lname = document.getElementById('price');
+    const parrafo = document.getElementById('warnings');
+
+    form.addEventListener('submit', e=>{
+        e.preventDefault();
+        let warnings = "";
+        let entrar = false;
+
+        parrafo.innerHTML = "";
+        
+        if(!regexEmail.test(mail.value)){
+            warnings +=`Verifica el correo, este debe ser un correo valido <br>`
+            entrar = true;
+        }
+
+    })

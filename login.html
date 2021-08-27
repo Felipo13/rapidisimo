@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- API GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title> Inicia Sesión | Rappidisimo </title>
+</head>
+<body>
+    <link rel="stylesheet" href="CSS/style-layout.css">
+    <header id="main-header">
+        <a id="logo-header" href="/">
+            <span class="rappi">Rappidisimo</span>
+           
+            
+                </a> <!-- / #logo-header -->
+    
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="about">Contacto</a></li>
+            </ul>
+        </nav><!-- / nav -->
+    
+    </header><!-- / #main-header -->
+
+
+
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/sweetalert2.min.css">
+    
+        <div class="container-login">
+            <div class="wrap-login">
+                    
+        
+    
+        <form action="loginval.php" method="POST" class="login-form validate-form" id="form">
+            <span class="login-form-title">LOGIN</span>
+        <label for="mail"></label>
+        <div class="wrap-input100" data-validate = "Usuario incorrecto">
+    <input  class="input100" type="text" id="mail" autofocus required placeholder="Ingresa tu correo" name="mail">
+    <span class="focus-efecto"></span>  </div>
+    
+    <div class="wrap-input100" data-validate="Password incorrecto">
+    <label for="pass"></label>
+    <input class="input100" type="password" id="pass" placeholder="Ingresa tu contraseña" required name="pass">
+    <span class="focus-efecto"></span>
+                </div>
+    
+                <div class="container-login-form-btn">
+                    <div class="wrap-login-form-btn">
+                        <div class="login-form-bgbtn"></div>
+    <button type="submit" class="login-form-btn" value="Log In"> Ingresar </button>
+    </form></div>
+    <p><a href="registro.html">Si no cuentas con una cuenta Registrate </a></p>
+        <p>-O-</p><br>
+        <p><a href=" {{ url('/auth/redirect') }} ">Google</a></p>
+    
+    <p class="warnings" id="warnings"></p>
+    
+                </div>
+            </form>
+        </div>
+    </div>     
+        
+    
+    
+        
+    
+        <script type="text/javascript" src="JS/login.js">
+            
+        </script>
+
+<footer>
+    <footer id="main-footer">
+
+    
+        <h4><center>Copyright Rapiddisimo © 2021. All rights reserved.</center></h4>
+
+    </footer>
+</body>
+</html>

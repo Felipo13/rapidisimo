@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- API GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title> Registrate ahora   | Rappidisimo </title>
+</head>
+<body>
+    <link rel="stylesheet" href="CSS/style-layout.css">
+    <header id="main-header">
+        <a id="logo-header" href="/">
+            <span class="rappi">Rappidisimo</span>
+           
+            
+                </a> <!-- / #logo-header -->
+    
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="about">Contacto</a></li>
+            </ul>
+        </nav><!-- / nav -->
+    
+    </header><!-- / #main-header -->
+
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<link rel="stylesheet" href="CSS/estilos.css">
+<link rel="stylesheet" href="CSS/bootstrap.min.css">
+<link rel="stylesheet" href="CSS/sweetalert2.min.css">
+<div class="container-login">
+    <div class="wrap-login">
+<form class="login-form validate-form" action="registroval.php" method="POST" id="form">
+<span class="login-form-title">Registro</span>
+
+<div class="wrap-input100" data-validate = "Usuario incorrecto">
+<label for="mail"></label>
+<input class="input100"  type="email" name="email" autofocus  placeholder="Ingresa un correo" id="mail" required>
+<span class="focus-efecto"></span>  </div>
+
+<div class="wrap-input100" data-validate = "Usuario incorrecto">
+<label for="pass"></label>
+<input class="input100"  type="password" name="pass"  placeholder="Ingresa una contraseña" id="pass" required>
+<span class="focus-efecto"></span>  </div>
+
+<div class="wrap-input100" data-validate = "Usuario incorrecto">
+<label for="name"></label>
+<input class="input100"  type="text" name="name"  placeholder="Ingresa tu(s) nombre(s)" id="name" required>
+<span class="focus-efecto"></span>  </div>
+
+<div class="wrap-input100" data-validate = "Usuario incorrecto">
+<label for="lname"></label>
+<input class="input100"  type="text" name="lname"  placeholder="Ingresa tus apellidos" id="lname" required>
+<span class="focus-efecto"></span>  </div>
+
+<div class="wrap-input100" data-validate = "Usuario incorrecto">
+<label for="addres"></label>
+<input class="input100"  type="text" name="addres"  placeholder="Ingresa tu dirección" id="addres" required>
+<span class="focus-efecto"></span>  </div>
+
+<div class="wrap-input100" data-validate = "Usuario incorrecto">
+<label for="phone"></label>
+<input class="input100" type="tel" name="phone" id="phone" placeholder="Ingresa tu telefono" id="phone">
+<span class="focus-efecto"></span>  </div>
+
+
+    
+
+<div class="container-login-form-btn">
+                <div class="wrap-login-form-btn">
+                    <div class="login-form-bgbtn"></div>
+
+<p><button type="submit"  class="login-form-btn" value="Registrate">Registrarse</p>
+</form>
+</div>
+<p class="warnings" id="warnings"></p>
+
+            </div>
+        </form>
+    </div>
+</div>    
+</div> 
+ 
+
+
+    <script type="text/javascript" src="JS/registro.js">
+    
+    </script>
+   
+   <footer>
+    <footer id="main-footer">
+
+    
+        <h4><center>Copyright Rapiddisimo © 2021. All rights reserved.</center></h4>
+
+    </footer>
+</body>
+</html>

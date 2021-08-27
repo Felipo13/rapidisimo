@@ -1,0 +1,9 @@
+body{
+    background-color: hotpink;
+}
+
+.foto{
+    height:40% ;
+    align-items: center;
+    width: 70%;
+}
