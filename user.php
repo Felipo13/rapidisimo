@@ -37,9 +37,7 @@
 
 include "conexion/cone.php";
 include "helper.php";
-
-
-
+echo "Hola usuario"
 
 
 

@@ -6,30 +6,35 @@
 
     //echo $user . " " . $pass;
 
-    $q = "SELECT * FROM user WHERE mail = '$user' AND pass = '$pass'";
 
-    $admi = "SELECT * FROM adm WHERE mail = '$user' AND pass = '$pass'";
+    $q = mysqli_query($conn, "SELECT * FROM user WHERE mail = '".$user."' AND pass = '".$pass."'");
+    $nr = mysqli_num_rows($q);
 
-    if (mysqli_query($conn, $q)) {
-        
+    $admi = mysqli_query($conn, "SELECT * FROM adm WHERE mail = '$user' AND pass = '$pass'");
+    $nr1 = mysqli_num_rows($admi);
+
+    //if ($nr1 == 1) {
+      //  $nr1 = 3.1416;
+    //}
+
+
+    if($nr == 1) {
         session_start();
         $_SESSION['user'] = $user;
         $_SESSION['pass'] = $pass;
         $_SESSION['table'] = 'user';
-
         header('Location: user.php' );
-    }
-    elseif (mysqli_query($conn, $admi)) {
+
+    }elseif ($nr1 == 1) {
         session_start();
         $_SESSION['user'] = $user;
         $_SESSION['pass'] = $pass;
         $_SESSION['table'] = 'adm';
-        header('Location: adm.php' );
+        header('Location: adm.php');
+    }else {
+        echo "<script>alert('No se encontro ningun registro similar a eso mano')</script>";
     }
-    else{
-        echo "No encontre registros pai";
-    }
-
-    include 'conexion/close.php';
+    
+    
    
 ?>

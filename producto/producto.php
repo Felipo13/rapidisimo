@@ -11,10 +11,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <title> Bienvenido Administrador </title>
+        <title> Registra un nuevo producto </title>
 </head>
 <body>
-    <link rel="stylesheet" href="CSS/style-layout.css">
+    <link rel="stylesheet" href="../CSS/style-layout.css">
     <header id="main-header">
         <a id="logo-header" href="/">
             <span class="rappi">Rappidisimo</span>
@@ -24,46 +24,38 @@
     
         <nav>
             <ul>
-                <li><a href="adm.php">Inicio</a></li>
+                <li><a href="../adm.php">Inicio</a></li>
                 <li><a href="">Acerca de</a></li>
                 <li><a href="about">Contacto</a></li>
             </ul>
         </nav><!-- / nav -->
     
     </header><!-- / #main-header -->
+    
+    <?php $res = $_GET['resta'] ?>
+    
+    <center>
+    Agregar un nuevo producto
 
-
-<?php 
-
-include 'conexion/cone.php';
-include "helper.php";
-
-
-$q2 = "SELECT * FROM restaurante WHERE FK_adm = '$id'";
-
-$r2 = mysqli_query($conn, $q2);
-
-
-    while($consulta = mysqli_fetch_array($r2)){ ?>
-
-
-    <li>  <a href="restaurante.php?RTN=<?php echo $consulta['IdR'] ?>">  <?php echo $consulta['name'] ?> </a> </li>
-
-
-
-    <?php } 
-
-
-
-
-include 'conexion/close.php'
-
-?>
-
-<a href="NResta.html">Agrega un nuevo restaurante</a>
-
-
-
+    <form action="productov.php" method="POST">
+        <label for="">
+            <input type="text" name="name" id="" placeholder="Ingresa el nombre del producto" autofocus required>
+        </label><br><br>
+        <label for="">
+            <input type="text" name="descrip" required placeholder="Ingresa una pequeña descripcion del producto" id="">
+        </label><br><br>
+        <label for="">
+            <input type="number" name="price" placeholder="Precio del producto" required id="">
+        </label><br><br>
+        <label for=""> Selecciona la fotografia del producto<br>
+            <input type="file" name="photo"  id="">
+        </label>
+        <br><br>
+        <input type="hidden" name="resta1" value="<?php echo $res ?>">
+        <input type="submit" value="Registrar producto">
+        <br><br>
+    </form>
+</center>
 
     <footer>
         <footer id="main-footer">
