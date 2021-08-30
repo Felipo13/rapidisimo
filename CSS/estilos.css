@@ -49,20 +49,24 @@ button:hover {
 
 .container-login {
   width: 100%;  
-  min-height: 100vh;
-  display: -webkit-flex;
+  min-height: 60vh;
+/*   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   padding: 15px;
-  background: -webkit-linear-gradient(to right, #ff7565, #f7ff66);
-  background: linear-gradient(to right, #ff7565, #f7ff66);
+/*   background: -webkit-linear-gradient(to right, #ff7565, #f7ff66);
+  background: linear-gradient(to right, #ff7565, #f7ff66); */
 }
 
 .wrap-login {
   width: 400px;
   background: #eceff1;
+  display: block;
+  margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
   border-radius: 20px;
   overflow: hidden;
   padding: 77px 55px 53px 55px;
