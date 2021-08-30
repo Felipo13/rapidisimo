@@ -10,15 +10,10 @@
     $q = "SELECT * FROM $table WHERE mail = '$user' AND pass = '$pass'";
 
     $r = mysqli_query($conn, $q);
-    if ($r) {
-        $consult = mysqli_fetch_array($r);
-        $id = $consult['idU'];
-        $name = $consult['name'];
-    }elseif ($r) {
-        $consult = mysqli_fetch_array($r);
-        $id = $consult['idA'];
-        $name = $consult['nombre'];
-    }
+    
+    $consult = mysqli_fetch_array($r);
+    $id = $consult['id'];
+    $name = $consult['name'];
     
 
     
