@@ -1,3 +1,6 @@
+<?php 
+include "conexion/cone.php";
+include "helper.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +28,7 @@
         <nav>
             <ul>
                 <li><a href="user.php">Inicio</a></li>
+                <li><a href="" onclick="alert('Aun no esta disponible este modulo')"><?php echo $name ?></a></li>
                 <li><a href="#">Acerca de</a></li>
                 <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
@@ -33,15 +37,24 @@
     </header><!-- / #main-header -->
 
 
-<?php 
 
-include "conexion/cone.php";
-include "helper.php";
-echo "Hola usuario"
+<?php
+//echo $name, "<br>";
 
+$pe = "SELECT * FROM restaurante";
+$qe = mysqli_query($conn, $pe);
 
+while($line = mysqli_fetch_array($qe)){ ?>
 
+  <center><a href="Vproducto.php?quimo=<?php echo $line['IdR'] ?>"> <?php echo $line['name'], " | phone: " , $line['phone']/*, $line['logo']*/ ?> </a></center>
+
+<?php }
 ?>
+<br><br><br><br>
+
+
+
+
 
 
 

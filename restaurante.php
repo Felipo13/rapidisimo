@@ -1,7 +1,8 @@
 <?php 
-
-
-?>
+    $idr = $_GET['RTN'];
+    include 'conexion/cone.php';
+    include 'helper.php'
+    ?>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -23,6 +24,7 @@
         <nav>
             <ul>
                 <li><a href="/">Inicio</a></li>
+                <li><a href="" onclick="alert('Aun no esta disponible este modulo')"><?php echo $name ?></a></li>
                 <li><a href="#">Acerca de</a></li>
                 <li><a href="about">Contacto</a></li>
             </ul>
@@ -34,14 +36,12 @@
     <h2> Restaurante: <?php echo $_GET['RTN'] ?></h2>
 
     <center>
-    <?php 
-    $idr = $_GET['RTN'];
-    include 'conexion/cone.php';
+    
+    <?php
     $respue = mysqli_query($conn, "SELECT * FROM producto WHERE FK_resta = '$idr'");
     while($prod = mysqli_fetch_array($respue)){ ?>
 
-    <a href=""> <?php echo $prod['name'] ?> </a>   <a href="#" onclick="alert('Ahorita no esta el modulo de actualizar aun')">    <i class="fas fa-pen"></i> </a>   <a href="#" onclick="alert('Ahorita no esta el modulo de eliminar aun')"><i class="far fa-trash-alt"></i></a> <br>
-
+    <a href=""> <?php echo $prod['name'] ?> </a>   <a href="#" onclick="alert('Ahorita no esta el modulo de actualizar aun')">    <i class="fas fa-pen"></i> </a>   <a href="producto/Dproducto.php?presente=<?php echo $prod['IdP'] ?>" ><i class="far fa-trash-alt"></i></a> <br>
     <?php   }    ?>
 
     <br><br><br>

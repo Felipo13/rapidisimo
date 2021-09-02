@@ -17,7 +17,7 @@
     
 
     
-    echo $id . " " . $name;
+    //echo $id . " " . $name;
     
 
 ?>

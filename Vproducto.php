@@ -1,11 +1,10 @@
-<?php include 'conexion/cone.php';
-include "helper.php"?>
+<?php include 'conexion/cone.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <script src="https://kit.fontawesome.com/f50a179eb5.js" crossorigin="anonymous"></script>
     <!-- API GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +12,7 @@ include "helper.php"?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <title> Bienvenido Administrador </title>
+        <title> Bienvenido a Rappidisimo </title>
 </head>
 <body>
     <link rel="stylesheet" href="CSS/style-layout.css">
@@ -26,50 +25,38 @@ include "helper.php"?>
     
         <nav>
             <ul>
-                <li><a href="adm.php">Inicio</a></li>
+                <li><a href="user.php">Inicio</a></li>
                 <li><a href="" onclick="alert('Aun no esta disponible este modulo')"><?php echo $name ?></a></li>
-                <li><a href="">Acerca de</a></li>
-                <li><a href="about">Contacto</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
         </nav><!-- / nav -->
     
     </header><!-- / #main-header -->
+    <center><a href="" onclick="alert('Aun no esta disponible este modulo')">Carrito de compras</a></center>
 
-
+<br>
 
 <?php
+$id = $_GET['quimo'];
 
-$q2 = "SELECT * FROM restaurante WHERE FK_adm = '$id'";
+$pr = "SELECT * FROM producto WHERE FK_resta='$id'";
+$resp = mysqli_query($conn, $pr);
+while ($row = mysqli_fetch_array($resp)) {?>
+    
+    <li> <?php echo $row['name'], "  " , $row['description'] ?> <button onclick="alert('Aun no esta disponible este modulo')"><i  class="fas fa-shopping-cart"></i></button> </li>
 
-$r2 = mysqli_query($conn, $q2);
-
-
-    while($consulta = mysqli_fetch_array($r2)){ ?>
-
-
-    <li>  <a href="restaurante.php?RTN=<?php echo $consulta['IdR'] ?>">  <?php echo $consulta['name'] ?> </a> </li>
-
-
-
-    <?php } 
-
-
-
-
-include 'conexion/close.php'
-
+<?php
+}
 ?>
 
-<a href="NResta.html">Agrega un nuevo restaurante</a>
 
-
-
-
-    <footer>
+<footer>
         <footer id="main-footer">
     
         
             <h4><center>Copyright Rapiddisimo © 2021. All rights reserved.</center></h4>
+            <center>Si tienes alguna duda </center>
     
         </footer>
     </body>
