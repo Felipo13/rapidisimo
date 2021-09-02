@@ -7,7 +7,7 @@ body {
 	font-size: 1.2em;
 	line-height: 1.5em;
 	
-	padding-top: 80px;
+	/* padding-top: 80px; */
 }
 #rappi {
     background-image: url('/public/img/Logo.png');
@@ -40,17 +40,17 @@ img {
 //-------------------------------
 ************/
 #main-header {
-	background: rgba(111, 108, 108, 0.707);
-	color: white;
-	height: 80px;
-	
-	width: 100%;
-	left: 0;
-	top: 0;
-	position: fixed;
+	background-image: url(../img/inicio1.jpg); /*Imagen del indice*/
+    /* background-position: top; */
+    background-size: cover;
+    height: 10vh;
+    min-height: 20rem;
 }	
 	#main-header a {
-		color: white;
+		/* background-color: rgb(255, 255, 255);
+		border-radius: 4px;
+		margin: 10px; */
+		color: rgb(190, 103, 81);
 	}
 	
 	
@@ -107,7 +107,7 @@ nav {
 			}
 			
 				nav ul li a:hover {
-					background: #eb2323a8;
+					background: #ffffffa8;
 				}
 	
 
@@ -130,7 +130,36 @@ nav {
 	#main-content .content {
 		padding: 40px;
 	}
-	
+.home{
+	width: 40%;
+	margin: 60px;
+	padding: 77px 55px 53px 55px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+
+.home a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #d3983f;
+	border: 1px solid #d3983f;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.home a:hover{
+	background: #d3983f;
+	color: #fff;
+}
 
 
 /************
@@ -143,7 +172,7 @@ nav {
 	color: white;
 	text-align: left;
 	padding: 10px;
-	margin-top: 0px;
+	margin-top: 100px;
 	font-family: 'Montserrat', sans-serif;
 }
 	#main-footer p {
